@@ -71,5 +71,20 @@ namespace FileOperations
             else
                 Console.WriteLine("File not Exits");
         }
+        public void FileStreamWriter(string filePath)
+        {
+            if (File.Exists(filePath))
+            {
+                using (StreamWriter sr = File.AppendText(filePath))
+                {
+                    string word = "currently working on.net";
+                    sr.WriteLine(word);
+                    sr.Close();
+                    Console.WriteLine(File.ReadAllText(filePath));
+                }
+            }
+            else
+                Console.WriteLine("File not exits");
+        }
     }
 }
