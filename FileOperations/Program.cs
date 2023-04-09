@@ -9,7 +9,7 @@ namespace FileOperation
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Choose Option to Perform\n1.File Exits\n2.Read All Lines\n3.Read All Texts\n4.Copy File\n5.Delete file\n6.Exit");
+                Console.WriteLine("Choose Option to Perform\n1.File Exits\n2.Read All Lines\n3.Read All Texts\n4.Copy File\n5.Delete file\n6.File Stream Reader\n7.Exit");
                 int option=Convert.ToInt32(Console.ReadLine());
                 Operation operation = new Operation();
                 switch(option)
@@ -29,7 +29,10 @@ namespace FileOperation
                         case 5:
                         operation.FileDelete(@"D:\BridgeLabs\FileOpeartions\FileOperations\newExample.txt");
                         break;
-                    case 6:
+                        case 6:
+                        operation.FileStreamReader(@"D:\BridgeLabs\FileOpeartions\FileOperations\Example.txt");
+                        break;
+                    case 7:
                         flag = false;
                         break;
                 }
