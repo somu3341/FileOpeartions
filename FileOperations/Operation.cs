@@ -38,5 +38,14 @@ namespace FileOperations
             else
                 Console.WriteLine("file Not exits");
         }
+        public void FileCopy(String filePath, string newFile)
+        {
+            if (File.Exists(filePath))
+            {
+                File.Copy(filePath, newFile);
+            }
+            else
+                Console.WriteLine("File not Exits");
+        }
     }
 }
