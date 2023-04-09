@@ -47,5 +47,14 @@ namespace FileOperations
             else
                 Console.WriteLine("File not Exits");
         }
+        public void FileDelete(string newFile)
+        {
+            if (File.Exists(newFile))
+            {
+                File.Delete(newFile);
+            }
+            else
+                Console.WriteLine("File not Exits");
+        }
     }
 }
