@@ -9,7 +9,7 @@ namespace FileOperation
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Choose Option to Perform\n1.File Exits\n2.Exit");
+                Console.WriteLine("Choose Option to Perform\n1.File Exits\n2.Read All Lines\n3.Exit");
                 int option=Convert.ToInt32(Console.ReadLine());
                 Operation operation = new Operation();
                 switch(option)
@@ -18,6 +18,9 @@ namespace FileOperation
                         operation.FileExits(@"D:\BridgeLabs\FileOpeartions\FileOperations\Example.txt");
                         break;
                     case 2:
+                        operation.FileReadAllLines(@"D:\BridgeLabs\FileOpeartions\FileOperations\Example.txt");
+                        break;
+                    case 3:
                         flag = false;
                         break;
                 }
