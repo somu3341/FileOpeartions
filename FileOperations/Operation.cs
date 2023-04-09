@@ -28,5 +28,15 @@ namespace FileOperations
             else
                 Console.WriteLine("File not Exits");
         }
+        public void FileReadAllText(string filePath)
+        {
+            if (!File.Exists(filePath))
+            {
+                string lines = File.ReadAllText(filePath);
+                Console.WriteLine(lines);
+            }
+            else
+                Console.WriteLine("file Not exits");
+        }
     }
 }
